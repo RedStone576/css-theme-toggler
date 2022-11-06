@@ -1,0 +1,126 @@
+:root {
+  color-scheme: dark;
+
+  --synthwave-background: #161320;
+  --synthwave-heading: #dcdcdc;
+  --synthwave-text: #cfc9d9;
+  --synthwave-hr: #1e1e2e;
+  --synthwave-dim: #948b9e;
+  --synthwave-sep: #E9436D;
+  --synthwave-link: #25B0BC;
+  --synthwave-unicode: "🌓︎";
+  
+  --forest-background: #121313;
+  --forest-heading: #fbfafa;
+  --forest-text: #c2c3c3;
+  --forest-hr: #181819;
+  --forest-dim:#848585;
+  --forest-sep: #eeaaac;
+  --forest-link: #72d6af;
+  --forest-unicode: "🍂";
+
+  --sakura-background: #FCE7F3;
+  --sakura-heading: #78716C;
+  --sakura-text: #4d5156;
+  --sakura-hr: #FECDD3;
+  --sakura-dim: #C1ADAE;
+  --sakura-sep: #efb5ba;
+  --sakura-link: #cb7d83;
+  --sakura-unicode: "λ";
+  
+  --background: var(--synthwave-background);
+  --heading:    var(--synthwave-heading);
+  --text:       var(--synthwave-text);
+  --hr:         var(--synthwave-hr);
+  --dim:        var(--synthwave-dim);
+  --sep:        var(--synthwave-sep);
+  --link:       var(--synthwave-link);
+  --unicode:    var(--synthwave-unicode);
+  
+  --current: "1";
+  
+  --display-1:  var(--unicode);
+  --display-2:  "";
+  --display-3:  "";
+}
+
+.switcher-1,
+.switcher-2,
+.switcher-3,
+.current-text {
+  display: none; //remove these if u wanna see the radio element thing
+}
+
+/* theme 1 */
+
+.switcher-1:checked ~ .page {
+  --background: var(--synthwave-background);
+  --heading:    var(--synthwave-heading);
+  --text:       var(--synthwave-text);
+  --hr:         var(--synthwave-hr);
+  --dim:        var(--synthwave-dim);
+  --sep:        var(--synthwave-sep);
+  --link:       var(--synthwave-link);
+  --unicode:    var(--synthwave-unicode);
+  
+  --current: "1";
+  
+  --display-1: var(--unicode);
+  --display-2: "";
+  --display-3: "";
+}
+
+/* theme 2 */
+
+.switcher-2:checked ~ .page {
+  --background: var(--forest-background);
+  --heading:    var(--forest-heading);
+  --text:       var(--forest-text);
+  --hr:         var(--forest-hr);
+  --dim:        var(--forest-dim);
+  --sep:        var(--forest-sep);
+  --link:       var(--forest-link);
+  --unicode:    var(--forest-unicode);
+  
+  --current: "2";
+  
+  --display-1: "";
+  --display-2: var(--unicode);
+  --display-3: "";
+}
+
+/* theme 3 */
+
+.switcher-3:checked ~ .page {
+  --background: var(--sakura-background);
+  --heading:    var(--sakura-heading);
+  --text:       var(--sakura-text);
+  --hr:         var(--sakura-hr);
+  --dim:        var(--sakura-dim);
+  --sep:        var(--sakura-sep);
+  --link:       var(--sakura-link);
+  --unicode:    var(--sakura-unicode);
+  
+  --current: "3";
+  
+  --display-1: "";
+  --display-2: "";
+  --display-3: var(--unicode);
+}
+
+.switcher-label-1::after {
+  content: var(--display-3);
+}
+
+.switcher-label-2::after {
+  content: var(--display-1);
+}
+
+.switcher-label-3::after {
+  content: var(--display-2);
+}
+
+.current-text::after {
+  content: var(--current);
+  pointer-events: all;
+}

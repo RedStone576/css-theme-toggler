@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="HandheldFriendly" content="true">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        
+        <title>& — Tally Hall</title>
+        
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./theme.css">
+    </head>
+    
+    <body>
+        <input type="radio" class="switcher-1" name="switcher" id="switcher-1">
+        <input type="radio" class="switcher-2" name="switcher" id="switcher-2">
+        <input type="radio" class="switcher-3" name="switcher" id="switcher-3">
+        
+        <div class="page">
+        <p class="current-text"></p>
+            <div class="main">                
+                <article>
+                    <br>
+                    <h1 style="font-size: 2em;">
+                        im about lose my sanity !!
+                        <span class="idn">
+                            <label class="switcher-label-1" for="switcher-1"></label>
+                            <label class="switcher-label-2" for="switcher-2"></label>         
+                            <label class="switcher-label-3" for="switcher-3"></label>
+                        </span>
+                    </h1>
+                    
+                    <hr>
+                    
+                    <p>
+                        this is a paragraph<br>
+                        click the <span class="ps"></span> on the top right corner of ur screen to change the theme<br>
+                        100% mochascript free!!!(technically 98%) butttttttt<br>
+                        these random nonsense is only for the showcase<br>
+                        i forgor what was needed to achieve this but i think it was radio checkbox, labels, the tilda thing on css idk<br>
+                        anyway, oOooOO look at these cool uh, geometrical shapes made out with 4 squares each? pieces 
+                    </p>
+                    
+                    <br>
+                    
+                    <p style="font-family: monospace">
+                        <span style=" color: #ff8b39">█▀▀</span> 
+                        <span style=" color: #f5de4a">██</span> 
+                        <span style=" color: #bd93f9">▄█▄</span> 
+                        <span style=" color: #72d6af">▄█▀</span>
+                        <span style=" color: #25B0BC">█▄▄</span> 
+                        <span style=" color: #8be9fd">▄▄▄▄</span>
+                        <span style=" color: #E9436D">▀█▄</span> 
+                    </p>
+                    
+                    <br>
+                    
+                    <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">click me</a></p>
+                
+                    <br>
+                    
+                    <blockquote>
+                        <em><q>holy shit a quote block</q></em>
+                        
+                        <blockquote>
+                            <em><q>holy shit a nested quote block</q></em>
+                            
+                            <blockquote>
+                                <em><q>insane</q></em>
+                            </blockquote>                 
+                        </blockquote>
+                        
+                        <em><q>im a genius</q></em>
+                        <br><br>
+                        <p>— not a genius</p> 
+                    </blockquote>                    
+                
+                    <br>
+                    
+                    <p><sep>•</sep> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">test</a></p>
+                    <p><sep>•</sep> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">cbt</a></p>
+                    <p><sep>•</sep> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">69696969</a></p>
+                
+                    <br><hr>
+                
+                    <br><br><br><br><br><br><br><br><br>
+                    
+                    <p>what ur looking at</p>
+                    <br>
+                </article>
+            </div>
+        </div>
+        
+        <script>
+            // ew 
+        
+            document.querySelector(`.switcher-${localStorage.getItem("s")??1}`).checked = true
+            document.querySelector(".idn").addEventListener("click", x => 
+            {
+                let c = window.getComputedStyle(document.querySelector(".current-text"), "::after")["content"][1]
+                let m = {3:1, 1:2, 2:3} //whack
+                localStorage.setItem("s",m[Number(c)])
+            })
+        </script>
+    </body>
+</html>
